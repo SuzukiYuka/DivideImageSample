@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0B2DC887-7B3D-4DF6-B844-5C4DC98104BF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DivideImageSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>64F5FE5882D3938C28AF4790010267EE9EB85F99</key>
+		<string>github.com:SuzukiYuka/DivideImageSample.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DivideImageSample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>64F5FE5882D3938C28AF4790010267EE9EB85F99</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:SuzukiYuka/DivideImageSample.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>64F5FE5882D3938C28AF4790010267EE9EB85F99</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>64F5FE5882D3938C28AF4790010267EE9EB85F99</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DivideImageSample</string>
+		</dict>
+	</array>
+</dict>
+</plist>
