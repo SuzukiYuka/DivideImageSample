@@ -23,6 +23,8 @@
     
     // サンプル画像を読み込む
     UIImage *image = [UIImage imageNamed:@"mizubuu.png"];
+    
+    //画像を分割
     NSArray *imageViews = [self divideImage:image];
     
     for (UIImageView *iv in imageViews) {
@@ -64,16 +66,6 @@
     return cropped;
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    // タッチしたら、画像をバラバラにくずす
-    for (int i=0; i<[views count]; i++) {
-        [UIView animateWithDuration:0.8 delay:i * 0.05 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            UIView *v = [views objectAtIndex:i];
-            v.center = CGPointMake(v.center.x, 600);
-        } completion:^(BOOL finished) {}];
-    }
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
