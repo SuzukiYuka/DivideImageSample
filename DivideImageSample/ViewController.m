@@ -9,19 +9,20 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
-@property (nonatomic, strong) NSMutableArray *views;
+@interface ViewController (){
+    int size;
+}
+
 @end
 
 @implementation ViewController
-@synthesize views;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //
-    views = [[NSMutableArray alloc] init];
-    
+//    views = [[NSMutableArray alloc] init];
+    size = 50;
     // サンプル画像を読み込む
     UIImage *image_mae = [UIImage imageNamed:@"mizubuu.png"];
     UIImage *image;  // リサイズ後UIImage
@@ -41,6 +42,11 @@
         [self.view addSubview:bt];
        // [views addObject:bt];
     }
+    
+    UIButton *lastbtn = [buttons lastObject];
+   // lastbtn.hidden = YES;
+    
+    
 }
 
 - (NSArray *)divideImage:(UIImage *)image
@@ -48,31 +54,60 @@
     // イメージをバラバラに分割する
     NSMutableArray *result = [[NSMutableArray alloc] init];
     //ひとつひとつ分かれた画像の大きさ
-    int size = 50;
-    
-    for (int y=0; y<300; y+=size) {
-        for (int x=0; x<260; x+=size) {
-            CGRect rect = CGRectMake(x, y, size, size);
-            UIImage *croppedImage = [self imageByCropping:image toRect:rect];
+    int i = 0;
+    for (int y=0; y<200; y+=size) {
+        for (int x=0; x<200; x+=size) {
+//            UIImage *croppedImage = [self imageByCropping:image toRect:CGRectMake(x, y, size, size)];
             UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(x+60, y+100, size, size)];  // ボタンのサイズを指定する
-            [b setBackgroundImage:croppedImage forState:UIControlStateNormal];
+            [b setBackgroundImage:[self imageByCropping:image][i] forState:UIControlStateNormal];
+            i++;
         //    b.layer.zPosition = - (y * 100 + x); // 重なったとき上に来るように
+            [b addTarget:self action:@selector(pushed:) forControlEvents:UIControlEventTouchUpInside];
+
             [result addObject:b];
         }
     }
+
     return result;
 }
 
-
-- (UIImage *)imageByCropping:(UIImage *)crop toRect:(CGRect)rect
+- (NSArray *)imageByCropping:(UIImage *)crop
 {
-    // 指定した四角でイメージを切り抜き
-    CGImageRef imageRef = CGImageCreateWithImageInRect([crop CGImage], rect);
-    UIImage *cropped = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);
-    return cropped;
+    NSMutableArray *croppedImages = [[NSMutableArray alloc] init];
+    for (int y=0; y<200; y+=size) {
+        for (int x=0; x<200; x+=size) {
+            // 指定した四角でイメージを切り抜き
+            CGRect rect = CGRectMake(x, y, size, size);
+            CGImageRef imageRef = CGImageCreateWithImageInRect([crop CGImage], rect);
+            UIImage *cropped = [UIImage imageWithCGImage:imageRef];
+            CGImageRelease(imageRef);
+            [croppedImages addObject:cropped];
+        }
+    }
+    //画像の順番をランダムにする
+    int count = [croppedImages count];
+    for (int i = count - 1; i > 0; i--) {
+        int randomNum = arc4random() % i;
+        [croppedImages exchangeObjectAtIndex:i withObjectAtIndex:randomNum];
+    }
+    return croppedImages;
 }
 
+
+//puzzleの動き
+-(void)pushed:(UIButton*)button{
+    //まわりにボタンの空きスペースがあるか
+    
+    //画像が元の画像と一致しているか
+}
+//まわりの空きスペースを確認
+-(void)checkHiddenBtn{
+    
+}
+//完成かどうかの判定
+-(void)check{
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
