@@ -15,7 +15,9 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    NSMutableArray *croppedImages;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,44 +34,36 @@
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    NSArray *buttons = [self divideImage:image]; // 画像を分割->buttonへ
+    [bt1 setBackgroundImage:[self imageByCropping:image][0] forState:UIControlStateNormal];
+    [bt2 setBackgroundImage:croppedImages[1] forState:UIControlStateNormal];
+    [bt3 setBackgroundImage:[self imageByCropping:image][2] forState:UIControlStateNormal];
+    [bt4 setBackgroundImage:[self imageByCropping:image][3] forState:UIControlStateNormal];
+    [bt5 setBackgroundImage:[self imageByCropping:image][4] forState:UIControlStateNormal];
+    [bt6 setBackgroundImage:[self imageByCropping:image][5] forState:UIControlStateNormal];
+    [bt7 setBackgroundImage:[self imageByCropping:image][6] forState:UIControlStateNormal];
+    [bt8 setBackgroundImage:[self imageByCropping:image][7] forState:UIControlStateNormal];
+    [bt9 setBackgroundImage:[self imageByCropping:image][8] forState:UIControlStateNormal];
+    [bt10 setBackgroundImage:[self imageByCropping:image][9] forState:UIControlStateNormal];
+    [bt11 setBackgroundImage:[self imageByCropping:image][10] forState:UIControlStateNormal];
+    [bt12 setBackgroundImage:[self imageByCropping:image][11] forState:UIControlStateNormal];
+    [bt13 setBackgroundImage:[self imageByCropping:image][12] forState:UIControlStateNormal];
+    [bt14 setBackgroundImage:[self imageByCropping:image][13] forState:UIControlStateNormal];
+    [bt15 setBackgroundImage:[self imageByCropping:image][14] forState:UIControlStateNormal];
+    [bt16 setBackgroundImage:[self imageByCropping:image][15] forState:UIControlStateNormal];
+
     
     /* パズルピース(button)を画面に追加 */
-    for (UIButton *bt in buttons) {
-        [self.view addSubview:bt];
-    }
-    
     /* ピースの最後は表示させない */
-    UIButton *lastbtn = [buttons lastObject];
-    lastbtn.hidden = YES;
+    bt5.hidden = YES;
     
 }
 
-/* ピース（分割した画像が背景のボタン）をつくる */
-- (NSArray *)divideImage:(UIImage *)image
-{
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    
-    int i = 0;
-    for (int y=0; y<200; y+=size) {
-        for (int x=0; x<200; x+=size) {
-            // 各ピース(button)をつくる
-            UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(x+60, y+100, size, size)];
-            // 背景を分割したピースの画像にする
-            [b setBackgroundImage:[self imageByCropping:image][i] forState:UIControlStateNormal];
-            //ボタンを押したときのアクションを追加
-            [b addTarget:self action:@selector(pushed:) forControlEvents:UIControlEventTouchUpInside];
-            i++;
-            [result addObject:b];
-        }
-    }
-    return result;
-}
+
 
 /* 画像を分割する */
 - (NSArray *)imageByCropping:(UIImage *)crop
 {
-    NSMutableArray *croppedImages = [[NSMutableArray alloc] init];
+    croppedImages = [[NSMutableArray alloc] init];
     for (int y=0; y<200; y+=size) {
         for (int x=0; x<200; x+=size) {
             // 指定した四角でイメージをトリミング
@@ -81,28 +75,78 @@
         }
     }
     /* 画像の順番をランダムにする */
-    int count = [croppedImages count];
-    for (int i = count - 1; i > 0; i--) {
-        int randomNum = arc4random() % i;
-        [croppedImages exchangeObjectAtIndex:i withObjectAtIndex:randomNum];
-        NSLog(@"croppedImages == %@",croppedImages);
-    }
+//    int count = [croppedImages count];
+//    for (int i = count - 1; i > count/2; i--) {
+//        int randomNum = arc4random() % i;
+//        [croppedImages exchangeObjectAtIndex:i withObjectAtIndex:randomNum];
+//        NSLog(@"croppedImages == %@",croppedImages);
+//    }
     return croppedImages;
 }
 
+-(IBAction)bt1Pushed{
+    if(bt2.hidden == YES){
+        bt2.hidden = NO;
+        [bt2 setBackgroundImage:bt1.currentBackgroundImage forState:UIControlStateNormal];
+        bt1.hidden = YES;
+    }else if(bt5.hidden == YES){
+        bt5.hidden = NO;
+        [bt5 setBackgroundImage:bt1.currentBackgroundImage forState:UIControlStateNormal];
+        bt1.hidden = YES;
+    }
+    [self check];
+}
+-(IBAction)bt2Pushed{
+    
+}
+-(IBAction)bt3Pushed{
+    
+}
+-(IBAction)bt4Pushed{
+    
+}
+-(IBAction)bt5Pushed{
+    
+}
+-(IBAction)bt6Pushed{
+    
+}
+-(IBAction)bt7Pushed{
+    
+}
+-(IBAction)bt8Pushed{
+    
+}
+-(IBAction)bt9Pushed{
+    
+}
+-(IBAction)bt10Pushed{
+    
+}
+-(IBAction)bt11Pushed{
+    
+}
+-(IBAction)bt12Pushed{
+    
+}
+-(IBAction)bt13Pushed{
+    
+}
+-(IBAction)bt14Pushed{
+    
+}
+-(IBAction)bt15Pushed{
+    
+}
+-(IBAction)bt16Pushed{
+    
+}
 
-/* ピースが押されたときの動き */
--(void)pushed:(UIButton*)button{
-    //まわりにボタンの空きスペースがあるか
-    
-    //画像が元の画像と一致しているか
-}
-/* まわりの空きスペースを確認 */
--(void)checkHiddenBtn{
-    
-}
 /* 完成かどうか判定する */
 -(BOOL)check{
+    if(bt2.currentBackgroundImage == croppedImages[1]){
+        NSLog(@"一致");
+    }
     return NO;
 }
 
