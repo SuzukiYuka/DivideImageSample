@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController{
+    IBOutlet UIButton *bt0;
     IBOutlet UIButton *bt1;
     IBOutlet UIButton *bt2;
     IBOutlet UIButton *bt3;
@@ -24,7 +25,6 @@
     IBOutlet UIButton *bt13;
     IBOutlet UIButton *bt14;
     IBOutlet UIButton *bt15;
-    IBOutlet UIButton *bt16;
 }
 
 
