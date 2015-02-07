@@ -54,7 +54,7 @@
     
     /* パズルピース(button)を画面に追加 */
     /* ピースの最後は表示させない */
-    bt5.hidden = YES;
+    bt16.hidden = YES;
     
 }
 
@@ -94,52 +94,235 @@
         [bt5 setBackgroundImage:bt1.currentBackgroundImage forState:UIControlStateNormal];
         bt1.hidden = YES;
     }
-    [self check];
 }
 -(IBAction)bt2Pushed{
-    
+    if(bt1.hidden == YES){
+        bt1.hidden = NO;
+        [bt1 setBackgroundImage:bt2.currentBackgroundImage forState:UIControlStateNormal];
+        bt2.hidden = YES;
+    }else if(bt6.hidden == YES){
+        bt6.hidden = NO;
+        [bt6 setBackgroundImage:bt2.currentBackgroundImage forState:UIControlStateNormal];
+        bt2.hidden = YES;
+    }else if(bt3.hidden == YES){
+        bt3.hidden = NO;
+        [bt3 setBackgroundImage:bt2.currentBackgroundImage forState:UIControlStateNormal];
+        bt2.hidden = YES;
+    }
 }
 -(IBAction)bt3Pushed{
-    
+    if(bt2.hidden == YES){
+        bt2.hidden = NO;
+        [bt2 setBackgroundImage:bt3.currentBackgroundImage forState:UIControlStateNormal];
+        bt3.hidden = YES;
+    }else if(bt4.hidden == YES){
+        bt4.hidden = NO;
+        [bt4 setBackgroundImage:bt3.currentBackgroundImage forState:UIControlStateNormal];
+        bt3.hidden = YES;
+    }else if(bt7.hidden == YES){
+        bt7.hidden = NO;
+        [bt7 setBackgroundImage:bt3.currentBackgroundImage forState:UIControlStateNormal];
+        bt3.hidden = YES;
+    }
 }
 -(IBAction)bt4Pushed{
-    
+    if(bt3.hidden == YES){
+        bt3.hidden = NO;
+        [bt3 setBackgroundImage:bt4.currentBackgroundImage forState:UIControlStateNormal];
+        bt4.hidden = YES;
+    }else if(bt8.hidden == YES){
+        bt8.hidden = NO;
+        [bt8 setBackgroundImage:bt4.currentBackgroundImage forState:UIControlStateNormal];
+        bt4.hidden = YES;
+    }
 }
 -(IBAction)bt5Pushed{
-    
+    if(bt1.hidden == YES){
+        bt1.hidden = NO;
+        [bt1 setBackgroundImage:bt5.currentBackgroundImage forState:UIControlStateNormal];
+        bt5.hidden = YES;
+    }else if(bt6.hidden == YES){
+        bt6.hidden = NO;
+        [bt6 setBackgroundImage:bt5.currentBackgroundImage forState:UIControlStateNormal];
+        bt5.hidden = YES;
+    }else if(bt9.hidden == YES){
+        bt9.hidden = NO;
+        [bt9 setBackgroundImage:bt5.currentBackgroundImage forState:UIControlStateNormal];
+        bt5.hidden = YES;
+    }
 }
 -(IBAction)bt6Pushed{
-    
+    if(bt2.hidden == YES){
+        bt2.hidden = NO;
+        [bt2 setBackgroundImage:bt6.currentBackgroundImage forState:UIControlStateNormal];
+        bt6.hidden = YES;
+    }else if(bt5.hidden == YES){
+        bt5.hidden = NO;
+        [bt5 setBackgroundImage:bt6.currentBackgroundImage forState:UIControlStateNormal];
+        bt6.hidden = YES;
+    }else if(bt7.hidden == YES){
+        bt7.hidden = NO;
+        [bt7 setBackgroundImage:bt6.currentBackgroundImage forState:UIControlStateNormal];
+        bt6.hidden = YES;
+    }else if(bt10.hidden == YES){
+        bt10.hidden = NO;
+        [bt10 setBackgroundImage:bt6.currentBackgroundImage forState:UIControlStateNormal];
+        bt6.hidden = YES;
+    }
 }
 -(IBAction)bt7Pushed{
-    
+    if(bt3.hidden == YES){
+        bt3.hidden = NO;
+        [bt3 setBackgroundImage:bt7.currentBackgroundImage forState:UIControlStateNormal];
+        bt7.hidden = YES;
+    }else if(bt6.hidden == YES){
+        bt6.hidden = NO;
+        [bt6 setBackgroundImage:bt7.currentBackgroundImage forState:UIControlStateNormal];
+        bt7.hidden = YES;
+    }else if(bt8.hidden == YES){
+        bt8.hidden = NO;
+        [bt8 setBackgroundImage:bt7.currentBackgroundImage forState:UIControlStateNormal];
+        bt7.hidden = YES;
+    }else if(bt11.hidden == YES){
+        bt11.hidden = NO;
+        [bt11 setBackgroundImage:bt7.currentBackgroundImage forState:UIControlStateNormal];
+        bt7.hidden = YES;
+    }
 }
 -(IBAction)bt8Pushed{
-    
+    if(bt4.hidden == YES){
+        bt4.hidden = NO;
+        [bt4 setBackgroundImage:bt8.currentBackgroundImage forState:UIControlStateNormal];
+        bt8.hidden = YES;
+    }else if(bt7.hidden == YES){
+        bt7.hidden = NO;
+        [bt7 setBackgroundImage:bt8.currentBackgroundImage forState:UIControlStateNormal];
+        bt8.hidden = YES;
+    }else if(bt12.hidden == YES){
+        bt12.hidden = NO;
+        [bt12 setBackgroundImage:bt8.currentBackgroundImage forState:UIControlStateNormal];
+        bt8.hidden = YES;
+    }
 }
 -(IBAction)bt9Pushed{
-    
+    if(bt5.hidden == YES){
+        bt5.hidden = NO;
+        [bt5 setBackgroundImage:bt9.currentBackgroundImage forState:UIControlStateNormal];
+        bt9.hidden = YES;
+    }else if(bt10.hidden == YES){
+        bt10.hidden = NO;
+        [bt10 setBackgroundImage:bt9.currentBackgroundImage forState:UIControlStateNormal];
+        bt9.hidden = YES;
+    }else if(bt13.hidden == YES){
+        bt13.hidden = NO;
+        [bt13 setBackgroundImage:bt9.currentBackgroundImage forState:UIControlStateNormal];
+        bt9.hidden = YES;
+    }
 }
 -(IBAction)bt10Pushed{
-    
+    if(bt6.hidden == YES){
+        bt6.hidden = NO;
+        [bt6 setBackgroundImage:bt10.currentBackgroundImage forState:UIControlStateNormal];
+        bt10.hidden = YES;
+    }else if(bt9.hidden == YES){
+        bt9.hidden = NO;
+        [bt9 setBackgroundImage:bt10.currentBackgroundImage forState:UIControlStateNormal];
+        bt10.hidden = YES;
+    }else if(bt11.hidden == YES){
+        bt11.hidden = NO;
+        [bt11 setBackgroundImage:bt10.currentBackgroundImage forState:UIControlStateNormal];
+        bt10.hidden = YES;
+    }else if(bt14.hidden == YES){
+        bt14.hidden = NO;
+        [bt14 setBackgroundImage:bt10.currentBackgroundImage forState:UIControlStateNormal];
+        bt10.hidden = YES;
+    }
 }
 -(IBAction)bt11Pushed{
-    
+    if(bt7.hidden == YES){
+        bt7.hidden = NO;
+        [bt7 setBackgroundImage:bt11.currentBackgroundImage forState:UIControlStateNormal];
+        bt11.hidden = YES;
+    }else if(bt10.hidden == YES){
+        bt10.hidden = NO;
+        [bt10 setBackgroundImage:bt11.currentBackgroundImage forState:UIControlStateNormal];
+        bt11.hidden = YES;
+    }else if(bt12.hidden == YES){
+        bt12.hidden = NO;
+        [bt12 setBackgroundImage:bt11.currentBackgroundImage forState:UIControlStateNormal];
+        bt11.hidden = YES;
+    }else if(bt15.hidden == YES){
+        bt15.hidden = NO;
+        [bt15 setBackgroundImage:bt11.currentBackgroundImage forState:UIControlStateNormal];
+        bt11.hidden = YES;
+    }
 }
 -(IBAction)bt12Pushed{
-    
+    if(bt8.hidden == YES){
+        bt8.hidden = NO;
+        [bt8 setBackgroundImage:bt12.currentBackgroundImage forState:UIControlStateNormal];
+        bt12.hidden = YES;
+    }else if(bt11.hidden == YES){
+        bt11.hidden = NO;
+        [bt11 setBackgroundImage:bt12.currentBackgroundImage forState:UIControlStateNormal];
+        bt12.hidden = YES;
+    }else if(bt16.hidden == YES){
+        bt16.hidden = NO;
+        [bt16 setBackgroundImage:bt12.currentBackgroundImage forState:UIControlStateNormal];
+        bt12.hidden = YES;
+    }
 }
 -(IBAction)bt13Pushed{
-    
+    if(bt9.hidden == YES){
+        bt9.hidden = NO;
+        [bt9 setBackgroundImage:bt13.currentBackgroundImage forState:UIControlStateNormal];
+        bt13.hidden = YES;
+    }else if(bt14.hidden == YES){
+        bt14.hidden = NO;
+        [bt14 setBackgroundImage:bt13.currentBackgroundImage forState:UIControlStateNormal];
+        bt13.hidden = YES;
+    }
 }
 -(IBAction)bt14Pushed{
-    
+    if(bt10.hidden == YES){
+        bt10.hidden = NO;
+        [bt10 setBackgroundImage:bt14.currentBackgroundImage forState:UIControlStateNormal];
+        bt14.hidden = YES;
+    }else if(bt13.hidden == YES){
+        bt13.hidden = NO;
+        [bt13 setBackgroundImage:bt14.currentBackgroundImage forState:UIControlStateNormal];
+        bt14.hidden = YES;
+    }else if(bt15.hidden == YES){
+        bt15.hidden = NO;
+        [bt15 setBackgroundImage:bt14.currentBackgroundImage forState:UIControlStateNormal];
+        bt14.hidden = YES;
+    }
 }
 -(IBAction)bt15Pushed{
-    
+    if(bt11.hidden == YES){
+        bt11.hidden = NO;
+        [bt11 setBackgroundImage:bt15.currentBackgroundImage forState:UIControlStateNormal];
+        bt15.hidden = YES;
+    }else if(bt14.hidden == YES){
+        bt14.hidden = NO;
+        [bt14 setBackgroundImage:bt15.currentBackgroundImage forState:UIControlStateNormal];
+        bt15.hidden = YES;
+    }else if(bt16.hidden == YES){
+        bt16.hidden = NO;
+        [bt16 setBackgroundImage:bt15.currentBackgroundImage forState:UIControlStateNormal];
+        bt15.hidden = YES;
+    }
 }
 -(IBAction)bt16Pushed{
-    
+    if(bt12.hidden == YES){
+        bt12.hidden = NO;
+        [bt12 setBackgroundImage:bt16.currentBackgroundImage forState:UIControlStateNormal];
+        bt16.hidden = YES;
+    }else if(bt15.hidden == YES){
+        bt15.hidden = NO;
+        [bt15 setBackgroundImage:bt16.currentBackgroundImage forState:UIControlStateNormal];
+        bt16.hidden = YES;
+    }
 }
 
 /* 完成かどうか判定する */
