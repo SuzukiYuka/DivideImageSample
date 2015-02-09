@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E24BB1901A88897B00981157 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = E24BB18F1A88897B00981157 /* cat.png */; };
+		E24BB1941A888C9400981157 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E24BB1931A888C9400981157 /* icon.png */; };
 		E2E128F31A1588AC003B4BE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E128F21A1588AC003B4BE6 /* main.m */; };
 		E2E128F61A1588AC003B4BE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E128F51A1588AC003B4BE6 /* AppDelegate.m */; };
 		E2E128F91A1588AC003B4BE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E128F81A1588AC003B4BE6 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		E24BB18F1A88897B00981157 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		E24BB1931A888C9400981157 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E2E128ED1A1588AC003B4BE6 /* DivideImageSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DivideImageSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E128F11A1588AC003B4BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E128F21A1588AC003B4BE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		E2E128EF1A1588AC003B4BE6 /* DivideImageSample */ = {
 			isa = PBXGroup;
 			children = (
+				E24BB1931A888C9400981157 /* icon.png */,
 				E24BB18F1A88897B00981157 /* cat.png */,
 				E2E128F41A1588AC003B4BE6 /* AppDelegate.h */,
 				E2E128F51A1588AC003B4BE6 /* AppDelegate.m */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E128FC1A1588AC003B4BE6 /* Main.storyboard in Resources */,
+				E24BB1941A888C9400981157 /* icon.png in Resources */,
 				E2E129011A1588AC003B4BE6 /* LaunchScreen.xib in Resources */,
 				E24BB1901A88897B00981157 /* cat.png in Resources */,
 				E2E128FE1A1588AC003B4BE6 /* Images.xcassets in Resources */,
