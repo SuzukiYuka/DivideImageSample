@@ -23,8 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    clearLabel.hidden = YES;
+    
     size = 50; // パズルピースの画像の大きさ
-    UIImage *image_mae = [UIImage imageNamed:@"mizubuu.png"]; // サンプル画像を読み込む
+    UIImage *image_mae = [UIImage imageNamed:@"cat.png"]; // サンプル画像を読み込む
     UIImage *image;  // リサイズ後UIImage
     CGFloat width = 200;  // リサイズ後幅のサイズ
     CGFloat height = 200;  // リサイズ後高さのサイズ
@@ -426,6 +429,7 @@
     if (isClear == YES) {
         //ここにclearした時の処理を書く
         NSLog(@"Clear");
+        clearLabel.hidden = NO;
     }
 }
 

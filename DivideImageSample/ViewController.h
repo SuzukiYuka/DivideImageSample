@@ -25,6 +25,8 @@
     IBOutlet UIButton *bt13;
     IBOutlet UIButton *bt14;
     IBOutlet UIButton *bt15;
+    
+    IBOutlet UILabel *clearLabel;
 }
 
 
